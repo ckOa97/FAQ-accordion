@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <style type="text/css">
+    .attribution {
+      display: none;
+    }
+
+    * {
+
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+
+      font-family: Work Sans, sans-serif;
+
+    }
+
+    #faq-container {
+
+      width: 100%;
+      max-width: 1440px;
+      margin: auto;
+      box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.432);
+      background-color: hsl(275, 100%, 97%);
+      background-image: url('assets/images/background-pattern-desktop.svg');
+      background-repeat: no-repeat;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    #faq-container > div {
+      
+      width: 100%;
+      max-width: 600px;
+      background-color: hsl(0, 0%, 100%);
+      padding: 3rem 3rem 1.5rem 3rem;
+      border-radius: 15px;
+      
+    }
+    
+    .faq-container {
+      
+      display: flex;
+      height: 100vh;
+
+    }
+
+    .faq-container-overflow {
+
+      display: block;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+    }
+
+    .faq-container-overflow > div {
+
+      margin: auto;
+
+    }
+
+    #faq-section-heading {
+
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 3rem;
+
+    }
+
+    #faq-section-heading img {
+
+      display: block;
+      position: relative;
+      top: 1px;
+
+    }
+
+    #faq-section-heading h1 {
+
+      color: hsl(292, 42%, 14%);
+      font-size: 3.2rem;
+
+    }
+    
+    #faq-section-content > div {
+
+      border-bottom: 2px solid #f8f7fc;
+      margin-bottom: 1.5rem;
+
+    }
+
+    #faq-section-content > div:last-of-type {
+
+      border-bottom-style: none;
+
+    }
+
+    #faq-section-content > div > div {
+      
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+    }
+
+    #faq-section-content button {
+
+      margin: 0;
+      padding: 0;
+      width: 25px;
+      height: 25px;
+      background-color: transparent;
+      border-radius: 100%;
+      background-repeat: no-repeat;
+      background-position: -2px -3px;
+      border-style: none;
+      cursor: pointer;
+      flex-shrink: 0;
+
+    }
+
+    .icon-plus {
+
+      background-image: url('./assets/images/icon-plus.svg');
+
+    }
+
+    .icon-minus {
+
+      background-image: url('./assets/images/icon-minus.svg');
+
+    }
+
+    #faq-section-content h3 {
+
+      color: hsl(292, 42%, 14%);
+      font-size: 1.1rem;
+      font-weight: 600;
+
+    }
+
+    #faq-section-content p {
+
+      color: hsl(292, 16%, 49%);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+
+    }
+
+    .display-none {
+
+      display: none;
+
+    }
+
+
+    @media screen and (max-width: 1000px) {
+      :root {
+
+        font-size: 15px;
+
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      :root {
+
+        font-size: 14px;
+
+      }
+    }
+
+    @media screen and (max-width: 513px) {
+      :root {
+
+        font-size: 13px;
+
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      
+      #faq-container > div {
+
+        padding: 2rem 2rem 1rem 2rem;
+
+      }
+
+    }
+
+    @media screen and (max-width: 375px) {
+
+      #faq-container {
+
+        background-image: url('assets/images/background-pattern-mobile.svg');
+
+      }
+
+    }
+
+    @media screen and (max-width: 300px) {
+      :root {
+
+        font-size: 12px;
+
+      }
+
+      #faq-container > div {
+
+        padding: 2rem 1rem 1rem 2rem;
+
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="faq-container" class="faq-container">
+    <div>
+      <div id="faq-section-heading">
+        <img src="assets/images/icon-star.svg" alt="star icon">
+        <h1>FAQs</h1>
+      </div>
+      <div id="faq-section-content">
+        <div id="q1">
+          <div>
+            <h3>What is Frontend Mentor, and how will it help me?</h3>
+            <button class="icon-plus" type="button"></button>
+          </div>
+          <p class="display-none">Frontend Mentor offers realistic coding challenges to hep developers 
+            improve their frontend coding skills with projects in HTML, CSS, 
+            and JavaScript. It's suitable for all levels and ideal for portfolio
+            building.</p>
+        </div>
+        <div id="q2">
+          <div>
+            <h3>Is Frontend Mentor free?</h3>
+            <button class="icon-plus" type="button"></button>
+          </div>
+          <p class="display-none">The majority of our challenges are free, yes. 
+            We do have some that are premium and require a Pro subscription to access. 
+            It will say on each challenge whether they are free or premium, so it's
+             easy to tell the difference.</p>
+        </div>
+        <div id="q3">
+          <div>
+            <h3>Can I use Frontend Mentor projects in my portfolio?</h3>
+            <button class="icon-plus" type="button"></button>
+          </div>
+          <p class="display-none">Definitely! Please do feel free to use whatever you build in your portfolio. 
+            Helping developers add professional-looking projects to their portfolio 
+            was one of the reasons we created this platform!</p>
+        </div>
+        <div id="q4">
+          <div>
+            <h3>How can I get help if I'm stuck on a challenge?</h3>
+            <button class="icon-plus" type="button"></button>
+          </div>
+          <p class="display-none">The best (and quickest) way to get help on a challenge is in our Discord server. 
+            There are thousands of other developers in there, so it's a great place to ask questions. 
+            We even have a dedicated "help" channel! If you haven't joined yet, you can get an invite 
+            to our Discord server here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    const buttons = document.querySelectorAll('#faq-section-content button');
+    const faqElContainer = document.querySelector('#faq-container');
+    const faqEl = document.querySelector('#faq-container > div');
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+      checkFaqElOverflow();
+    });
+
+    window.addEventListener('resize', e => {
+      checkFaqElOverflow();
+    });
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+
+        if(button.parentNode.parentNode.querySelector('p').classList.contains('display-none')) {
+          button.parentNode.parentNode.querySelector('p').classList.remove('display-none');
+          this.classList.remove('icon-plus');
+          this.classList.add('icon-minus');
+        } else {
+          button.parentNode.parentNode.querySelector('p').classList.add('display-none');
+          this.classList.remove('icon-minus');
+          this.classList.add('icon-plus');
+        }
+
+        checkFaqElOverflow();
+        //setTimeout(() => {
+         // checkFaqElOverflow();
+       // }, 100);
+      });
+    });
+
+    function checkFaqElOverflow() {
+
+      if(faqEl.getBoundingClientRect().height > window.innerHeight) {
+        if(faqElContainer.classList.contains('faq-container')) {
+          faqElContainer.classList.remove('faq-container');
+          faqElContainer.classList.add('faq-container-overflow');
+        }
+      } else {
+        if(faqElContainer.classList.contains('faq-container-overflow')) {
+          faqElContainer.classList.remove('faq-container-overflow');
+          faqElContainer.classList.add('faq-container');
+        }
+      }
+
+    }
+
+  </script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Aleksandar Stankovic</a>.
+  </div>
+</body>
+</html>
