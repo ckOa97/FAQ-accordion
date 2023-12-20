@@ -42,16 +42,16 @@
     
   }
 
-  #faq-section-heading {
+  #faq-heading-section {
 
     display: flex;
     gap: 1rem;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 
   }
 
-  #faq-section-heading img {
+  #faq-heading-section img {
 
     display: block;
     position: relative;
@@ -59,29 +59,35 @@
 
   }
 
-  #faq-section-heading h1 {
+  #faq-heading-section h1 {
 
     color: hsl(292, 42%, 14%);
     font-size: 3.2rem;
 
   }
   
-  #faq-section-content > div {
+  #faq-content-section > div {
 
     border-bottom: 2px solid #f8f7fc;
-    margin-bottom: 1.5rem;
+    padding: 1.5rem 0;
+    cursor: pointer;
 
   }
 
-  #faq-section-content > div:last-of-type {
+  #faq-content-section > div:hover h2 {
+
+    color: #ae00ff;
+
+  }
+
+  #faq-content-section > div:last-of-type {
 
     border-bottom-style: none;
 
   }
 
-  #faq-section-content > div > div {
+  #faq-content-section > div > div {
     
-    margin-bottom: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,18 +95,13 @@
 
   }
 
-  #faq-section-content button {
+  #faq-content-section span {
 
-    margin: 0;
-    padding: 0;
     width: 25px;
     height: 25px;
-    background-color: transparent;
     border-radius: 100%;
     background-repeat: no-repeat;
     background-position: -2px -3px;
-    border-style: none;
-    cursor: pointer;
     flex-shrink: 0;
 
   }
@@ -117,7 +118,7 @@
 
   }
 
-  #faq-section-content h2 {
+  #faq-content-section h2 {
 
     color: hsl(292, 42%, 14%);
     font-size: 1.1rem;
@@ -125,11 +126,11 @@
 
   }
 
-  #faq-section-content p {
+  #faq-content-section p {
 
     color: hsl(292, 16%, 49%);
-    margin-bottom: 1.5rem;
     font-size: 0.95rem;
+    margin-top: 1.5rem;
 
   }
 

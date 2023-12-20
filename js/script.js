@@ -1,16 +1,16 @@
-const buttons = document.querySelectorAll('#faq-section-content button');
+const faqElements = document.querySelectorAll('#faq-content-section > div');
 
-buttons.forEach(button => {
-  button.addEventListener('click', function() {
+faqElements.forEach(el => {
+    el.addEventListener('click', function () {
 
-    if(button.parentNode.parentNode.querySelector('p').classList.contains('display-none')) {
-      button.parentNode.parentNode.querySelector('p').classList.remove('display-none');
-      this.classList.remove('icon-plus');
-      this.classList.add('icon-minus');
-    } else {
-      button.parentNode.parentNode.querySelector('p').classList.add('display-none');
-      this.classList.remove('icon-minus');
-      this.classList.add('icon-plus');
-    }
-  });
+        if (this.querySelector('p').classList.contains('display-none')) {
+            this.querySelector('p').classList.remove('display-none');
+            this.querySelector('span').classList.remove('icon-plus');
+            this.querySelector('span').classList.add('icon-minus');
+        } else {
+            this.querySelector('p').classList.add('display-none');
+            this.querySelector('span').classList.remove('icon-minus');
+            this.querySelector('span').classList.add('icon-plus');
+        }
+    });
 });
